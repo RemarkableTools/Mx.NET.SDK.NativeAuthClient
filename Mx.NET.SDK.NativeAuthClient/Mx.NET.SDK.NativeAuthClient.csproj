@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageId>RemarkableTools.Mx.NativeAuthClient</PackageId>
     <Title>RemarkableTools.Mx.NativeAuthClient</Title>
     <Authors>Remarkable Tools</Authors>
@@ -17,7 +17,7 @@
     <RepositoryUrl>https://github.com/RemarkableTools/Mx.NET.SDK.NativeAuthClient</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
     <PackageTags>RemarkableTools;MultiversX;MxDotNetNativeAuthClient</PackageTags>
-    <PackageReleaseNotes>Native Auth Client SDK public release</PackageReleaseNotes>
+    <PackageReleaseNotes>SDK updates and improvements</PackageReleaseNotes>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
@@ -39,20 +39,5 @@
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Update="LICENSE.txt">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Update="RemarkableToolsPackage.jpg">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
-
+  
 </Project>
