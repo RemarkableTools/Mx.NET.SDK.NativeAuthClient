@@ -13,6 +13,17 @@ namespace Mx.NET.SDK.NativeAuthClient
             _config = config;
         }
 
+        public static string GetAccessToken(
+            string address,
+            string token,
+            string signature)
+        {
+            var encodedAddress = EncodeValue(address);
+            var encodedToken = EncodeValue(token);
+
+            return $"{encodedAddress}.{encodedToken}.{signature}";
+        }
+
         public async Task<string> GenerateToken()
         {
             var origin = EncodeValue(_config.Origin);
