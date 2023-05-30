@@ -1,7 +1,10 @@
 ﻿using Mx.NET.SDK.NativeAuthClient.Data;
 using Mx.NET.SDK.NativeAuthClient.Entities;
 using Newtonsoft.Json;
+using System;
+using System.Net.Http;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Mx.NET.SDK.NativeAuthClient
 {
@@ -39,7 +42,7 @@ namespace Mx.NET.SDK.NativeAuthClient
         private async Task<Block> GetCurrentBlock()
         {
             var url = $"{_config.ApiUrl}/blocks?size=1&fields=hash,timestamp";
-            if (_config.BlockHashShard != null)
+            if (_config.BlockHashShard != -1)
                 url += $"&shard={_config.BlockHashShard}";
             var response = await new HttpClient().GetAsync(url);
             var blocks = JsonConvert.DeserializeObject<Block[]>(await response.Content.ReadAsStringAsync());
