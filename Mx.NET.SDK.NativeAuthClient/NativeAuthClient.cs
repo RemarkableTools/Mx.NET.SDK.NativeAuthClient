@@ -41,7 +41,7 @@ namespace Mx.NET.SDK.NativeAuthClient
 
         private async Task<Block> GetCurrentBlock()
         {
-            var url = $"{_config.ApiUrl}/blocks?size=1&fields=hash,timestamp";
+            var url = $"{_config.ApiUrl}blocks?size=1&fields=hash,timestamp";
             if (_config.BlockHashShard != -1)
                 url += $"&shard={_config.BlockHashShard}";
             var response = await new HttpClient().GetAsync(url);
